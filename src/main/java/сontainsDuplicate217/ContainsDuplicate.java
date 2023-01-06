@@ -10,7 +10,6 @@ public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
         long countOriginal = Arrays.stream(nums).count();
         long countDistinct = Arrays.stream(nums).distinct().count();
-        System.out.println("countOriginal = " + countOriginal + " countDistinct = " + countDistinct);
         return countOriginal != countDistinct;
     }
 }

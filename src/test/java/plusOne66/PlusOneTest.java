@@ -24,7 +24,7 @@ public class PlusOneTest {
     }
 
     @Test
-    public void plusOne() {
+    public void plusOne3() {
         int[] result = new PlusOne().plusOne(new int[]{9, 9});
         Assert.assertArrayEquals(result, new int[]{1, 0, 0});
     }

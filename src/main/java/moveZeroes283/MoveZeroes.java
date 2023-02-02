@@ -3,24 +3,26 @@ package moveZeroes283;
 public class MoveZeroes {
 
     public void moveZeroes(int[] nums){
-        //int zeroPointer = 0;
-        int otherPointer = 0;
-        int counter=0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i]==0 && nums[otherPointer]!=0){
-                nums[i]=nums[otherPointer];
-                counter++;
-                otherPointer++;
-            }
-//            if (nums[i]==0) {
-//                otherPointer
+        int zero = 0;
+        //int nonZero = 0;
+//        for (int n: nums) {
+//            if (n==0) {
+//                nonZero++;
+//            } else {
+//                zero++;
 //            }
-            while (nums[otherPointer]!=0 && otherPointer>i) {
-                otherPointer++;
+        for (int i = 0; i < nums.length && zero<nums.length; i++) {
+            if (nums[i]!=0 && nums[zero]==0){
+                nums[zero]=nums[i];
+                nums[i]=0;
+                zero++;
+            }
+
+            if (nums[zero]!=0) {
+//                nums[zero]=nums[i];
+//                nums[i]=0;
+                zero++;
             }
         }
-//        for (int n: nums) {
-//            if ()
-//        }
     }
 }
